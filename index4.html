@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blockchain Simulator - Versi Final</title>
+    <link rel="stylesheet" href="style4.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <button id="tab-home" class="active">Home</button>
+      <button id="tab-about">About Me</button>
+      <button id="tab-hash">Hash</button>
+      <button id="tab-block">Block</button>
+      <button id="tab-chain">Block Chain</button>
+      <button id="tab-ecc">ECC Signature</button>
+      <button id="tab-consensus">Konsensus</button>
+    </div>
+
+    <div class="page-wrapper">
+      
+      <div id="page-home" class="page active">
+        
+        <h2>Selamat datang di Website Belajar Blockchain</h2>
+        <div id="datetime"></div>
+        
+        <div class="info-box">
+          <h3>Petunjuk Penggunaan</h3>
+          
+          <p>
+            Website ini dirancang untuk membantu memahami konsep dan simulasi
+            berbagai teknik dalam <strong>Blockchain Technology</strong>. Ikuti
+            langkah-langkah berikut:
+          </p>
+          <ul>
+            <li>
+              Klik pada bagian <strong>Menu Bar</strong> di bagian atas untuk
+              memilih simulasi atau fitur yang ingin dipelajari.
+            </li>
+            <li>Menu Bar yang tersedia:</li>
+          </ul>
+          <ol class="menu-guide">
+            <li><strong>Home:</strong> Tampilan awal Website.</li>
+            <li><strong>About Me:</strong> Profil pembuat Website.</li>
+            <li>
+              <strong>Hash:</strong> Masukkan input teks pada area Text Input,
+              lalu hasil SHA-256 Hash akan muncul otomatis setiap kali teks
+              diubah.
+            </li>
+            <li>
+              <strong>Block:</strong> Anda dapat mengganti nomor blok, memberi
+              input data, serta mengatur kecepatan mining. Tekan tombol Mine
+              untuk memulai proses mining.
+            </li>
+            <li>
+              <strong>Block Chain:</strong> Masukkan data, tekan Mine, lalu Add
+              Block untuk menambah blok baru. Perhatikan bahwa Previous Hash
+              pada blok baru sama dengan hash blok sebelumnya.
+            </li>
+            <li>
+              <strong>ECC Signature:</strong> Klik Generate Key Pair untuk
+              membuat Public Key dan Private Key. Tulis pesan dan tekan Sign
+              Message untuk menghasilkan signature. Gunakan Verify Signature
+              untuk memeriksa validitas signature.
+            </li>
+            <li>
+              <strong>Konsensus:</strong> Simulasi dengan 3 user (saldo awal 67
+              koin). Buat transaksi, kirim, lalu tekan Mine Semua Transaksi
+              untuk membuat blok baru.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div id="page-about" class="page">
+        <h2>About Me</h2>
+        <div class="profile-section">
+          <img
+            src="fotowil.jpg" 
+            class="profile-pic"
+          />
+          <div class="profile-text">
+            <h3>Wildan Faiz Lahmadi</h3>
+            <p>
+              Mahasiswa semester 5 di <strong>Politeknik Elektronika Negeri Surabaya (PENS)</strong>,
+              Program Studi Teknologi Rekayasa Multimedia (TRM). Tertarik pada
+              pengembangan aplikasi, teknologi Blockchain, dan desain interaktif.
+            </p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <h3>Kompetensi</h3>
+          <ol>
+            <li>Desain dan Pengembangan Antarmuka Pengguna (UI/UX).</li>
+            <li>Pengembangan Aplikasi Web dasar (HTML, CSS, JavaScript).</li>
+            <li>Pemahaman Konsep Blockchain dan Kriptografi.</li>
+            <li>Penggunaan perangkat lunak desain grafis (misal: Figma, Adobe XD).</li>
+            <li>Penggunaan Visual Novel Menggunakan Aplikasi Renpy.</li>
+          </ol>
+
+          <h3>Riwayat Pendidikan</h3>
+          <ol>
+            <li>
+              D4 Teknologi Rekayasa Multimedia — Politeknik Elektronika Negeri Surabaya (PENS) (2023 - Sekarang).
+            </li>
+            <li>
+              SMAN Hangtuah 2 Sidoarjo (IPA) (2020 - 2023).
+            </li>
+          </ol>
+
+          <h3>Proyek & Minat</h3>
+          <ul>
+            <li>
+              <strong>Proyek:</strong> Pengembangan Website Simulasi Blockchain (Tugas Akhir Mata Kuliah).
+            </li>
+            <li>
+              <strong>Minat:</strong> Pengembangan teknologi web3, Game development, dan Visual Novel.
+            </li>
+          </ul>
+        </div>
+
+        <div class="kontak-section">
+          <h3>Kontak & Lokasi</h3>
+          <p>
+            Alamat Kampus PENS: Politeknik Elektronika Negeri Surabaya, 
+            Jl. Raya ITS, Sukolilo, Surabaya, Jawa Timur 60117.
+          </p>
+          <div class="kontak-container">
+            <div class="kontak-map">
+                <iframe
+                    src="https://maps.google.com/maps?q=Pasca+Sarjana+PENS,+Surabaya&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    frameborder="0"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            <div class="kontak-form">
+              <h4>Hubungi Saya</h4>
+              <form>
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" placeholder="Nama Anda" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email Anda" required />
+
+                <label for="telepon">Nomor Telepon</label>
+                <input type="tel" id="telepon" placeholder="Nomor HP" />
+
+                <label for="pesan">Pesan</label>
+                <textarea
+                  id="pesan"
+                  rows="5"
+                  placeholder="Tulis pesan Anda di sini..."
+                  required
+                ></textarea>
+
+                <button type="submit" class="btn-kirim">Kirim Pesan</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="page-hash" class="page">
+        <h2>Hash Generator</h2>
+        <label for="hash-input">Text Input:</label>
+        <textarea id="hash-input" rows="4"></textarea>
+        <label>SHA-256 Hash:</label>
+        <div id="hash-output" class="output"></div>
+      </div>
+
+      <div id="page-block" class="page">
+        <h2>Single Block</h2>
+        <label for="block-number"># (Nomor Block):</label>
+        <input id="block-number" type="number" min="0" value="0" /> 
+        <label for="block-data">Data:</label>
+        <textarea id="block-data" rows="4"></textarea>
+        <label for="block-nonce">Nonce:</label>
+        <input id="block-nonce" type="text" maxlength="9" />
+        <label for="block-timestamp">Timestamp:</label>
+        <input id="block-timestamp" type="text" readonly />
+        <label>Hash:</label>
+        <div id="block-hash" class="output"></div>
+        <button id="btn-mine" class="mine">Mine</button>
+        <label for="speed-control">Kecepatan Mining:</label>
+        <select id="speed-control">
+          <option value="1">Normal</option>
+          <option value="10">10x Lebih Cepat</option>
+          <option value="50">50x Lebih Cepat</option>
+        </select>
+        <div id="mining-status" class="status"></div>
+      </div>
+
+      <div id="page-chain" class="page">
+        <h2>Blockchain</h2>
+        <div id="blockchain" class="chain-container"></div>
+        <div class="chain-controls">
+          <button id="btn-add-block">Add Block</button>
+        </div>
+      </div>
+
+      <div id="page-ecc" class="page">
+        <h2>Verifikasi ECC Digital Signature</h2>
+        <button id="btn-generate-key">Generate Key Pair</button>
+        <p>Public Key dan Private Key dapat diedit untuk percobaan.</p>
+        <label>Public Key:</label>
+        <textarea id="ecc-public" rows="3"></textarea>
+        <label>Private Key:</label>
+        <textarea id="ecc-private" rows="3"></textarea>
+        <hr />
+        <label>Pesan yang akan ditandatangani:</label>
+        <textarea id="ecc-message" rows="3"></textarea>
+        <button id="btn-sign">Sign Message</button>
+        <label>Hasil Signature (DER hex):</label>
+        <textarea id="ecc-signature" rows="3" readonly></textarea>
+        <hr />
+        <button id="btn-verify">Verify Signature</button>
+        <div id="ecc-verify-result" class="output"></div>
+      </div>
+
+      <div id="page-consensus" class="page">
+        <h2>Simulasi Konsensus</h2>
+        <div class="wallets">
+          <div class="wallet" data-user="A">
+            <h3>User A</h3>
+            <div>Saldo: <span id="saldo-A">100</span></div>
+            <label>Penerima:</label>
+            <select id="receiver-A">
+              <option value="B">User B</option>
+              <option value="C">User C</option>
+            </select>
+            <label>Jumlah:</label>
+            <input id="amount-A" type="number" min="1" value="10" />
+            <button id="send-A">Kirim</button>
+          </div>
+          <div class="wallet" data-user="B">
+            <h3>User B</h3>
+            <div>Saldo: <span id="saldo-B">100</span></div>
+            <label>Penerima:</label>
+            <select id="receiver-B">
+              <option value="A">User A</option>
+              <option value="C">User C</option>
+            </select>
+            <label>Jumlah:</label>
+            <input id="amount-B" type="number" min="1" value="10" />
+            <button id="send-B">Kirim</button>
+          </div>
+          <div class="wallet" data-user="C">
+            <h3>User C</h3>
+            <div>Saldo: <span id="saldo-C">100</span></div>
+            <label>Penerima:</label>
+            <select id="receiver-C">
+              <option value="A">User A</option>
+              <option value="B">User B</option>
+            </select>
+            <label>Jumlah:</label>
+            <input id="amount-C" type="number" min="1" value="10" />
+            <button id="send-C">Kirim</button>
+          </div>
+        </div>
+        <div style="margin-top: 12px">
+          <label>Mempool (pending transactions):</label>
+          <textarea
+            id="mempool"
+            rows="3"
+            placeholder="Setiap transaksi di baris baru. Contoh: A -> B:10"
+          ></textarea>
+        </div>
+        <div style="margin-top: 12px">
+          <button id="btn-mine-all">Mine Semua Transaksi</button>
+          <button id="btn-verify-consensus">Verify</button>
+          <button id="btn-consensus">Consensus</button>
+        </div>
+        <h3 style="margin-top: 20px">Blockchain Tiap User</h3>
+        <div id="chains">
+          <h4>Database User A</h4>
+          <div id="chain-A" class="chain-row"></div>
+          <h4>Database User B</h4>
+          <div id="chain-B" class="chain-row"></div>
+          <h4>Database User C</h4>
+          <div id="chain-C" class="chain-row"></div>
+        </div>
+      </div>
+    </div> <footer>
+      <div class="footer-logo">
+        <img src="logo-pens.png" alt="PENS Logo" />
+        <span>Politeknik Elektronika Negeri Surabaya</span>
+      </div>
+      <div class="footer-contact">
+        <p>📧 Email: <strong>wildanfaiz05@gmail.com</strong></p>
+        <p>
+          🌐 Website:
+          <a href="https://www.pens.ac.id" target="_blank">pens.ac.id</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabs = document.querySelectorAll('.navbar button');
+        const pages = document.querySelectorAll('.page');
+
+        // Logic Tab Switching
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            const targetId = tab.id.replace('tab-', 'page-');
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            pages.forEach(p => p.classList.remove('active'));
+
+            tab.classList.add('active');
+
+            const targetPage = document.getElementById(targetId);
+            if (targetPage) {
+              targetPage.classList.add('active');
+            }
+          });
+        });
+
+        // Logic Update Date & Time
+        function updateDateTime() {
+            const days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+            const months = [
+                "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus",
+                "September", "Oktober", "November", "Desember",
+            ];
+            const now = new Date(
+                new Date().toLocaleString("en-US", { timeZone: "Asia/Jakarta" })
+            );
+            const dayName = days[now.getDay()];
+            const date = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+            const hh = now.getHours().toString().padStart(2, "0");
+            const mm = now.getMinutes().toString().padStart(2, "0");
+            const ss = now.getSeconds().toString().padStart(2, "0");
+            const datetimeElement = document.getElementById("datetime");
+            if (datetimeElement) {
+                datetimeElement.textContent = `${dayName}, ${date} ${month} ${year} (${hh}:${mm}:${ss} WIB)`;
+            }
+        }
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/elliptic/6.5.4/elliptic.min.js"></script>
+    <script src="app4.js"></script>
+  </body>
+</html>
